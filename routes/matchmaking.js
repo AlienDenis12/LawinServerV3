@@ -2,6 +2,7 @@ const express = require("express");
 const app = express.Router();
 const fs = require("fs");
 const functions = require("../structs/functions.js");
+const { verifyToken, verifyClient } = require("../tokenManager/tokenVerify.js");
 const dotenv = require("dotenv");
 
 dotenv.config(); // Load environment variables from .env file

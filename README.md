@@ -1,30 +1,30 @@
 # LawinServerV3
-### LawinServer V3 is a fortnite backend written in Node.js that features an account system and xmpp.
+### LawinServer V3 is a fortnite backend written in Node.js (based on lawinV2)
 
 ## Features
 ### LawinServer V3
 * Very fast login (faster than Lawinv2 or what ever backend that is out there)
 * CloudStorage and ClientSettings (Settings Saving).
 * Events
-* Locker:
+* Locker: (fully working)
     + Changing items.
     + Changing banner icon and banner color.
     + Changing item edit styles.
     + Favoriting items.
     + Marking items as seen.
-* Friends:
+* Friends: (fully working)
     + Adding friends.
     + Accepting friend requests.
     + Removing friends.
     + Blocking friends.
     + Setting nicknames.
     + Removing nicknames.
-* Item Shop:
+* Item Shop: (semi working)
     + Customizable Item Shop.
     + Purchasing items from the Item Shop.
     + Gifting items to your friends.
-### XMPP Features
-- Parties (builds 3.5 to 14.50).
+### XMPP Features (fully working)
+- Parties (builds 3.5 to 14.50). ( will add more)
 - Chat (whispering, global chat, party chat).
 - Friends.
 ### NOTE: LawinServerV3 also does not support Save the World. (might add)
@@ -52,7 +52,7 @@
 ## Hosting for others
 You are allowed to host for others, however please credit me and don't remove my credits from `responses/contentpages.json`. (even my credits @Marvelco)
 
-## How to host LawinServerV2
+## How to host LawinServerV3
 1) Install [NodeJS](https://nodejs.org/en/) and [MongoDB](https://www.mongodb.com/try/download/community).
 2) Download and Extract LawinServerV3 to a safe location.
 3) Run "install_packages.bat" to install all the required modules.

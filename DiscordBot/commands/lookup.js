@@ -25,7 +25,7 @@ module.exports = {
         let onlineStatus = global.Clients.some(i => i.accountId == user.accountId);
 
         let embed = new MessageEmbed()
-        .setColor("#56ff00")
+        .setColor("#302c34")
         .setAuthor({ name: interaction.user.tag, iconURL: interaction.user.avatarURL() })
         .setFields(
             { name: "Discord", value: `<@${user.discordId}>` },

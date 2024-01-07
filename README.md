@@ -1,7 +1,15 @@
 # LawinServerV3
 ### LawinServer V3 is a fortnite backend written in Node.js (based on lawinV2)
 
-## Features
+## Credits
+| Name | Contributions |
+| --------------- | ----------- |
+| [Lawin](https://github.com/Lawin0129) | Creator of V2 |
+| [Marvelco](https://github.com/MarvelcoOGFN) | Creator of V3 |
+
+
+## Features:
+
 ### LawinServer V3
 * Very fast login (faster than Lawinv2 or what ever backend that is out there)
 * CloudStorage and ClientSettings (Settings Saving).
@@ -27,6 +35,8 @@
 - Parties (builds 3.5 to 14.50). ( will add more)
 - Chat (whispering, global chat, party chat).
 - Friends.
+
+  
 ### NOTE: LawinServerV3 also does not support Save the World. (might add)
 
 ## Discord Bot Commands

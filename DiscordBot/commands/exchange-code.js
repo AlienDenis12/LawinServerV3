@@ -28,7 +28,7 @@ module.exports = {
         }, 300000) // remove exchange code in 5 minutes if unused
 
         let embed = new MessageEmbed()
-        .setColor("#56ff00")
+        .setColor("#302c34")
         .setAuthor({ name: interaction.user.tag, iconURL: interaction.user.avatarURL() })
         .setFields(
             { name: "Exchange Code", value: exchange_code }

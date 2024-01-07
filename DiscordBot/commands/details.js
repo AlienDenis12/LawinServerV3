@@ -15,7 +15,7 @@ module.exports = {
         let onlineStatus = global.Clients.some(i => i.accountId == user.accountId);
 
         let embed = new MessageEmbed()
-        .setColor("#56ff00")
+        .setColor("#302c34")
         .setAuthor({ name: interaction.user.tag, iconURL: interaction.user.avatarURL() })
         .setFields(
             { name: "Created", value: `${new Date(user.created)}`.substring(0, 15) },

@@ -6,6 +6,7 @@
 | --------------- | ----------- |
 | [Lawin](https://github.com/Lawin0129) | Creator of V2 |
 | [Marvelco](https://github.com/MarvelcoOGFN) | Creator of V3 |
+| [xLoigi](https://github.com/xLoigi) | Added support a creator |
 
 
 ## Features:

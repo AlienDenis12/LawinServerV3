@@ -9,8 +9,8 @@
       "_type": "CommonUI Simple Message",
       "message": {
         "_type": "CommonUI Simple Message Base",
-        "title": "LawinServer V2",
-        "body": "Join my discord: https://discord.gg/KJ8UaHZ\nYouTube: Lawin\nTwitter: @lawin_010\nSource: https://github.com/Lawin0129/LawinServerV2"
+        "title": "LawinServer V3",
+        "body": "Join my discord: https://discord.gg/Mf6xeE5s9P\nSource:https://github.com/ShadowFN/LawinServerV3"
       }
     },
     "_activeDate": "2017-07-19T13:14:04.490Z",
@@ -209,21 +209,21 @@
       "_type": "Battle Royale News",
       "messages": [
         {
-          "image": "https://cdn.discordapp.com/attachments/927739901540188200/930882355818823720/1_of9OCSRWoAoS3_lNVKqM2g.png",
+          "image": "https://cdn.discordapp.com/attachments/1188614087224086558/1188615248714944592/discord.png",
           "hidden": false,
           "_type": "CommonUI Simple Message Base",
           "adspace": "DISCORD!",
           "title": "Join my discord server!",
-          "body": "https://discord.gg/KJ8UaHZ",
+          "body": "https://discord.gg/Mf6xeE5s9P",
           "spotlight": false
         },
         {
-          "image": "https://cdn.discordapp.com/attachments/927739901540188200/930882658546876506/lawin.jpg",
+          "image": "https://cdn.discordapp.com/attachments/1188614087224086558/1195386252720095282/Ghosts_of_the_Past_-_Emoticon_-_Fortnite.png",
           "hidden": false,
           "_type": "CommonUI Simple Message Base",
           "adspace": "ENJOY!",
-          "title": "LawinServer V2",
-          "body": "Enjoy LawinServer V2!",
+          "title": "LawinServer V3",
+          "body": "Enjoy LawinServer V3!",
           "spotlight": false
         }
       ]
@@ -1184,18 +1184,18 @@
       "tournaments": [
         {
           "title_color": "FFFFFF",
-          "loading_screen_image": "https://cdn.discordapp.com/attachments/927739901540188200/930882658546876506/lawin.jpg",
+          "loading_screen_image": "https://cdn.discordapp.com/attachments/1188614087224086558/1195386252720095282/Ghosts_of_the_Past_-_Emoticon_-_Fortnite.png",
           "background_text_color": "1B1B1B",
           "background_right_color": "DD091A",
-          "poster_back_image": "https://cdn.discordapp.com/attachments/927739901540188200/930882658546876506/lawin.jpg",
+          "poster_back_image": "https://cdn.discordapp.com/attachments/1188614087224086558/1195386252720095282/Ghosts_of_the_Past_-_Emoticon_-_Fortnite.png",
           "_type": "Tournament Display Info",
-          "pin_earned_text": "lawin is the winner!",
+          "pin_earned_text": "Marvelco is the winner!",
           "tournament_display_id": "s11_switchcup",
           "highlight_color": "FFFFFF",
           "schedule_info": "November 2nd & 3rd: 2pm - 5pm JST",
           "primary_color": "FFFFFF",
           "flavor_description": "cool",
-          "poster_front_image": "https://cdn.discordapp.com/attachments/927739901540188200/930882658546876506/lawin.jpg",
+          "poster_front_image": "https://cdn.discordapp.com/attachments/1188614087224086558/1195386252720095282/Ghosts_of_the_Past_-_Emoticon_-_Fortnite.png",
           "short_format_title": "Event Sessions",
           "title_line_2": "boomer",
           "title_line_1": "Solo",
@@ -1205,7 +1205,7 @@
           "long_format_title": "nice",
           "poster_fade_color": "DD091A",
           "secondary_color": "1B1B1B",
-          "playlist_tile_image": "https://cdn.discordapp.com/attachments/927739901540188200/930882658546876506/lawin.jpg",
+          "playlist_tile_image": "https://cdn.discordapp.com/attachments/1188614087224086558/1195386252720095282/Ghosts_of_the_Past_-_Emoticon_-_Fortnite.png",
           "base_color": "FFFFFF"
         }
       ],
@@ -1224,7 +1224,7 @@
         {
           "hidden": false,
           "_type": "CommonUI Simple Message Base",
-          "title": "LawinServer V2",
+          "title": "LawinServer V",
           "body": "Server created by Lawin (Twitter: @lawin_010)\nSource: https://github.com/Lawin0129/LawinServerV2",
           "spotlight": true
         }
@@ -1249,8 +1249,8 @@
           "gamemodes": [],
           "hidden": false,
           "_type": "CommonUI Emergency Notice Base",
-          "title": "LawinServer V2",
-          "body": "Server created by Lawin (Twitter: @lawin_010)\nSource: https://github.com/Lawin0129/LawinServerV2"
+          "title": "LawinServer V3",
+          "body": "Server created by Lawin Modified By Marvelco Source: https://github.com/ShadowFN/LawinServerV3"
         }
       ]
     },
@@ -5969,21 +5969,21 @@
       "_type": "Battle Royale News",
       "messages": [
         {
-          "image": "https://cdn.discordapp.com/attachments/927739901540188200/930882355818823720/1_of9OCSRWoAoS3_lNVKqM2g.png",
+          "image": "https://cdn.discordapp.com/attachments/1188614087224086558/1188615248714944592/discord.png",
           "hidden": false,
           "_type": "CommonUI Simple Message Base",
           "adspace": "DISCORD!",
           "title": "Join my discord server!",
-          "body": "https://discord.gg/KJ8UaHZ",
+          "body": "https://discord.gg/Mf6xeE5s9P",
           "spotlight": false
         },
         {
-          "image": "https://cdn.discordapp.com/attachments/927739901540188200/930882658546876506/lawin.jpg",
+          "image": "https://cdn.discordapp.com/attachments/1188614087224086558/1195386252720095282/Ghosts_of_the_Past_-_Emoticon_-_Fortnite.png",
           "hidden": false,
           "_type": "CommonUI Simple Message Base",
           "adspace": "ENJOY!",
-          "title": "LawinServer V2",
-          "body": "Enjoy LawinServer V2!",
+          "title": "LawinServer V3",
+          "body": "Enjoy LawinServer V3!",
           "spotlight": false
         }
       ]
@@ -6038,7 +6038,7 @@
           "bHidden": false,
           "sectionId": "Featured",
           "bShowTimer": true,
-          "sectionDisplayName": "LawinServer Item Shop",
+          "sectionDisplayName": "LawinServerV3 Item Shop",
           "bShowIneligibleOffers": true
         }
       ]
@@ -6054,21 +6054,21 @@
       "_type": "Battle Royale News",
       "messages": [
         {
-          "image": "https://cdn.discordapp.com/attachments/927739901540188200/930882355818823720/1_of9OCSRWoAoS3_lNVKqM2g.png",
+          "image": "https://cdn.discordapp.com/attachments/1188614087224086558/1188615248714944592/discord.png",
           "hidden": false,
           "_type": "CommonUI Simple Message Base",
           "adspace": "DISCORD!",
           "title": "Join my discord server!",
-          "body": "https://discord.gg/KJ8UaHZ",
+          "body": "https://discord.gg/Mf6xeE5s9P",
           "spotlight": false
         },
         {
-          "image": "https://cdn.discordapp.com/attachments/927739901540188200/930882658546876506/lawin.jpg",
+          "image": "https://cdn.discordapp.com/attachments/1188614087224086558/1195386252720095282/Ghosts_of_the_Past_-_Emoticon_-_Fortnite.png",
           "hidden": false,
           "_type": "CommonUI Simple Message Base",
           "adspace": "ENJOY!",
-          "title": "LawinServer V2",
-          "body": "Enjoy LawinServer V2!",
+          "title": "LawinServer V3",
+          "body": "Enjoy LawinServer V3!",
           "spotlight": false
         }
       ]

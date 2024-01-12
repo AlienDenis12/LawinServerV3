@@ -14,7 +14,7 @@
 ### LawinServer V3
 * Very fast login (faster than Lawinv2 or what ever backend that is out there)
 * CloudStorage and ClientSettings (Settings Saving).
-* Events
+* Events (added updated keychain that includes galactus, travis, device, skyfire and more)
 * Locker: (fully working)
     + Changing items.
     + Changing banner icon and banner color.

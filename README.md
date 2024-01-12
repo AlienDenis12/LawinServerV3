@@ -67,7 +67,7 @@ You are allowed to host for others, however please credit me and don't remove my
 1) Install [NodeJS](https://nodejs.org/en/) and [MongoDB](https://www.mongodb.com/try/download/community).
 2) Download and Extract LawinServerV3 to a safe location.
 3) Run "install_packages.bat" to install all the required modules.
-4) Go to .env in the directory you extracted LawinServerV2 into.
+4) Go to .env in the directory you extracted LawinServerV3 into.
 5) Open it, set your discord bot token (DO NOT SHARE THIS TOKEN) and save it. The discord bot will be used for creating accounts and managing your account.
 6) Run "start.bat", if there is no errors, it should work.
 7) Use something to redirect the Fortnite servers to localhost:8080 (Which could be fiddler, ssl bypass that redirects servers, or cobalt)

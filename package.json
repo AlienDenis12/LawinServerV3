@@ -1,7 +1,7 @@
 {
-  "name": "lawinserverv2",
+  "name": "lawinserverv3",
   "version": "1.0.0",
-  "description": "LawinServer V2 is a fortnite backend that features an account system and xmpp.",
+  "description": "LawinServer V3 is a fortnite backend that features an account system and xmpp.",
   "main": "index.js",
   "dependencies": {
     "bcrypt": "^5.1.0",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lawin0129/LawinServerV2.git"
+    "url": "git+https://github.com/ShadowFN/LawinServerV3.git"
   },
   "keywords": [
     "fortnite",
@@ -34,7 +34,7 @@
   "author": "Lawin0129",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/Lawin0129/LawinServerV2/issues"
+    "url": "https://github.com/ShadowFN/LawinServerV3/issues"
   },
-  "homepage": "https://github.com/Lawin0129/LawinServerV2#readme"
+  "homepage": "https://github.com/ShadowFN/LawinServerV3#readme"
 }

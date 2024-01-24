@@ -28,10 +28,11 @@
     + Blocking friends.
     + Setting nicknames.
     + Removing nicknames.
-* Item Shop: (semi working)
+* Item Shop: (Fully working)
     + Customizable Item Shop.
     + Purchasing items from the Item Shop.
     + Gifting items to your friends.
+    + Refunding system
 ### XMPP Features (fully working)
 - Parties (builds 3.5 to 14.50). ( will add more)
 - Chat (whispering, global chat, party chat).

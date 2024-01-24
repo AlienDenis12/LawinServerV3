@@ -39,7 +39,7 @@
 - Friends.
 
   
-### NOTE: LawinServerV3 also does not support Save the World. (might add)
+### NOTE: LawinServerV3 also does not support Save the World. (Will never add)
 
 ## Discord Bot Commands
 ### Commands:

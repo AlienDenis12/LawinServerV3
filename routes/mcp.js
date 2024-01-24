@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express.Router();
-
 const Friends = require("../model/friends");
 const Profile = require("../model/profiles.js");
 const profileManager = require("../structs/profile.js");
@@ -10,6 +9,36 @@ const functions = require("../structs/functions.js");
 const { verifyToken, verifyClient } = require("../tokenManager/tokenVerify.js");
 
 global.giftReceived = {};
+
+app.use(async function (req, res) {
+    if (!req.query.profileId) {
+        return res.status(404).json({
+            error: "Profile not defined."
+        });
+    }
+    functions.GetVersionInfo(req);
+    const profile = await Profile.findOne({ accountId: req.user.accountId });
+    if (!profile.rvn) profile.rvn = 0;
+    if (!profile.items) profile.items = {}
+    if (!profile.stats) profile.stats = {}
+    if (!profile.stats.attributes) profile.stats.attributes = {}
+    if (!profile.commandRevision) profile.commandRevision = 0;
+
+
+    var SeasonData = JSON.parse(JSON.stringify(require("./../responses/SeasonData.json")));
+    profile.stats.attributes.season_num = memory.season;
+
+    if (SeasonData[`Season${memory.season}`]) {
+        SeasonData = SeasonData[`Season${memory.season}`];
+
+        profile.stats.attributes.book_purchased = SeasonData.battlePassPurchased;
+        profile.stats.attributes.book_level = SeasonData.battlePassTier;
+        profile.stats.attributes.season_match_boost = SeasonData.battlePassXPBoost;
+        profile.stats.attributes.season_friend_match_boost = SeasonData.battlePassXPFriendBoost;
+        }
+    }
+)
+
 
 app.post("/fortnite/api/game/v2/profile/*/client/SetReceiveGiftsEnabled", verifyToken, async (req, res) => {
     const profiles = await Profile.findOne({ accountId: req.user.accountId });
@@ -70,6 +99,110 @@ app.post("/fortnite/api/game/v2/profile/*/client/SetReceiveGiftsEnabled", verify
         responseVersion: 1
     });
 });
+
+app.post("/fortnite/api/game/v2/profile/*/client/RefundMtxPurchase", verifyToken, async (req, res) => {
+    
+    const profilesy = await Profile.findOne({ accountId: req.user.accountId });
+
+    let profile = profilesy.profiles[req.query.profileId];
+    let athena = profilesy.profiles["athena"];
+
+    // do not change any of these or you will end up breaking it
+    var ApplyProfileChanges = [];
+    let MultiUpdate = [{
+        "profileRevision": athena.rvn || 0,
+        "profileId": "athena",
+        "profileChangesBaseRevision": athena.rvn || 0,
+        "profileChanges": [],
+        "profileCommandRevision": athena.commandRevision || 0,
+    }];
+    var BaseRevision = profile.rvn;
+    var QueryRevision = req.query.rvn || -1;
+    var StatChanged = false;
+    let ProfileRevisionCheck = (memory.build >= 12.20) ? profile.commandRevision : profile.rvn;
+
+    var ItemCost = [];
+    var ItemGuids = [];
+
+    if (req.body.purchaseId) {
+        MultiUpdate.push({
+            "profileRevision": athena.rvn || 0,
+            "profileId": "athena",
+            "profileChangesBaseRevision": athena.rvn || 0,
+            "profileChanges": [],
+            "profileCommandRevision": athena.commandRevision || 0,
+        })
+
+        profile.stats.attributes.mtx_purchase_history.refundsUsed += 1;
+        profile.stats.attributes.mtx_purchase_history.refundCredits -= 1;
+
+        for (var i = 0; i < profile.stats.attributes.mtx_purchase_history.purchases.length; i++) {
+            if (profile.stats.attributes.mtx_purchase_history.purchases[i].purchaseId == req.body.purchaseId) {
+                for (var x = 0; x < profile.stats.attributes.mtx_purchase_history.purchases[i].lootResult.length; x++) {
+                    ItemGuids.push(profile.stats.attributes.mtx_purchase_history.purchases[i].lootResult[x].itemGuid)
+                }
+                profile.stats.attributes.mtx_purchase_history.purchases[i].refundDate = new Date().toISOString();
+            }
+        }
+        for (var i = 0; i < ItemGuids.length; i++) {
+            delete athena.items[ItemGuids[i]]
+
+            MultiUpdate[0].profileChanges.push({
+                "changeType": "itemRemoved",
+                "itemId": ItemGuids[i]
+            })
+        }
+
+        athena.rvn += 1;
+        athena.commandRevision += 1;
+        profile.rvn += 1;
+        profile.commandRevision += 1;
+
+        StatChanged = true;
+    }
+
+    if (StatChanged == true) {
+        profile.updated = new Date().toISOString();
+
+        await profile.updateOne({ $set: { [`profiles.${req.query.profileId}`]: profile } });
+
+        /*        profile.rvn += 1;
+        profile.commandRevision += 1;
+        profile.updated = new Date().toISOString();
+
+        await profiles.updateOne({ $set: { [`profiles.${req.query.profileId}`]: profile } });
+        */
+
+        ApplyProfileChanges.push({
+            "changeType": "statModified",
+            "name": "mtx_purchase_history",
+            "value": profile.stats.attributes.mtx_purchase_history
+        })
+
+        MultiUpdate[0].profileRevision = athena.rvn || 0;
+        MultiUpdate[0].profileCommandRevision = athena.commandRevision || 0;
+    }
+
+    // this doesn't work properly on version v12.20 and above but whatever
+    if (QueryRevision != ProfileRevisionCheck) {
+        ApplyProfileChanges = [{
+            "changeType": "fullProfileUpdate",
+            "profile": profile
+        }];
+    }
+
+
+    res.json({
+        profileRevision: profile.rvn || 0,
+        profileId: req.query.profileId,
+        profileChangesBaseRevision: BaseRevision,
+        profileChanges: ApplyProfileChanges,
+        profileCommandRevision: profile.commandRevision || 0,
+        serverTime: new Date().toISOString(),
+        responseVersion: 1
+    });
+});
+
 
 app.post("/fortnite/api/game/v2/profile/*/client/GiftCatalogEntry", verifyToken, async (req, res) => {
     const profiles = await Profile.findOne({ accountId: req.user.accountId });
@@ -305,6 +438,8 @@ app.post("/fortnite/api/game/v2/profile/*/client/GiftCatalogEntry", verifyToken,
         profile.commandRevision += 1;
         profile.updated = new Date().toISOString();
 
+        // await profiles.updateOne({ $set: { [`profiles.${req.query.profileId}`]: profile, [`profiles.athena`]: athena } });
+
         await profiles.updateOne({ $set: { [`profiles.${req.query.profileId}`]: profile } });
     }
 
@@ -412,6 +547,8 @@ app.post("/fortnite/api/game/v2/profile/*/client/RemoveGiftBox", verifyToken, as
         responseVersion: 1
     });
 });
+
+
 
 app.post("/fortnite/api/game/v2/profile/*/client/PurchaseCatalogEntry", verifyToken, async (req, res) => {
     const profiles = await Profile.findOne({ accountId: req.user.accountId });

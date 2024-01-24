@@ -15,6 +15,7 @@
 * Very fast login (faster than Lawinv2 or what ever backend that is out there)
 * CloudStorage and ClientSettings (Settings Saving).
 * Events (added updated keychain that includes galactus, travis, device, skyfire and more)
+* Fixed logging in on some builds
 * Locker: (fully working)
     + Changing items.
     + Changing banner icon and banner color.

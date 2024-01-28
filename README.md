@@ -1,6 +1,8 @@
 # LawinServerV3
 ### LawinServer V3 is a fortnite backend written in Node.js (based on lawinV2)
 
+note: I have quit coding so i will not update this anymore buti have done alot realistically the only missing thing are season challenges
+
 ## Credits
 | Name | Contributions |
 | --------------- | ----------- |
@@ -16,6 +18,7 @@
 * CloudStorage and ClientSettings (Settings Saving).
 * Events (added updated keychain that includes galactus, travis, device, skyfire and more)
 * Fixed logging in on some builds
+* Working Battlepass from s2-s10 (can change but you have to update also the mcp. its made for chapter 1 seasons in chapter 2 they changed the system)
 * Locker: (fully working)
     + Changing items.
     + Changing banner icon and banner color.

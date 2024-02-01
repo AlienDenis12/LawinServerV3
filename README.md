@@ -1,7 +1,7 @@
 # LawinServerV3
 ### LawinServer V3 is a fortnite backend written in Node.js (based on lawinV2)
 
-note: I have quit coding so i will not update this anymore buti have done alot realistically the only missing thing are season challenges
+note: I am back and i will add whats missing soon
 
 ## Credits
 | Name | Contributions |

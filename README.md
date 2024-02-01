@@ -1,7 +1,7 @@
 # LawinServerV3
 ### LawinServer V3 is a fortnite backend written in Node.js (based on lawinV2)
 
-note: I am back and i will add whats missing soon
+note: I am back and i will add whats missing soon and i need someone to add the quests since i find it hard to do dm me at discord @Marvelco or create an issue
 
 ## Credits
 | Name | Contributions |

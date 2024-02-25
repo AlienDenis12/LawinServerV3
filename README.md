@@ -1,7 +1,7 @@
 # LawinServerV3
 ### LawinServer V3 is a fortnite backend written in Node.js (based on lawinV2)
 
-note: Tbh i quit making this backend mostly because i am getting bored modifing this so just use [Sirius](https://github.com/Skiesuwu/Sirius) A backend that is going to be 1:1 to the epic server 
+note: I am back working on this backend ( Any help would be nice )
 
 ## Credits
 | Name | Contributions |

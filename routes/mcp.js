@@ -10,7 +10,7 @@ const { verifyToken, verifyClient } = require("../tokenManager/tokenVerify.js");
 
 global.giftReceived = {};
 
-app.use(async function (req, res) {
+ /* app.use(async function (req, res) {
     if (!req.query.profileId) {
         return res.status(404).json({
             error: "Profile not defined."
@@ -37,7 +37,7 @@ app.use(async function (req, res) {
         profile.stats.attributes.season_friend_match_boost = SeasonData.battlePassXPFriendBoost;
         }
     }
-)
+) */
 
 
 app.post("/fortnite/api/game/v2/profile/*/client/SetReceiveGiftsEnabled", verifyToken, async (req, res) => {

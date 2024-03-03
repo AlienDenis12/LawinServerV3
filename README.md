@@ -18,7 +18,8 @@ note: I am back working on this backend ( Any help would be nice )
 * CloudStorage and ClientSettings (Settings Saving).
 * Events (added updated keychain that includes galactus, travis, device, skyfire and more)
 * Fixed logging in on some builds
-* Working Battlepass from s2-s10 (can change but you have to update also the mcp. its made for chapter 1 seasons in chapter 2 they changed the system)
+* Timeline Event Flags S3-S23
+* Working Battlepass from s2-s10 (temp removed)
 * Locker: (fully working)
     + Changing items.
     + Changing banner icon and banner color.

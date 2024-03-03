@@ -10,7 +10,7 @@
       "message": {
         "_type": "CommonUI Simple Message Base",
         "title": "LawinServer V3",
-        "body": "Join my discord: https://discord.gg/Mf6xeE5s9P\nSource:https://github.com/ShadowFN/LawinServerV3"
+        "body": "Join my discord:Source:https://github.com/ShadowFN/LawinServerV3"
       }
     },
     "_activeDate": "2017-07-19T13:14:04.490Z",
@@ -1224,8 +1224,8 @@
         {
           "hidden": false,
           "_type": "CommonUI Simple Message Base",
-          "title": "LawinServer V",
-          "body": "Server created by Lawin (Twitter: @lawin_010)\nSource: https://github.com/Lawin0129/LawinServerV2",
+          "title": "LawinServer V3",
+          "body": "Server created by Lawin Modified By Marvelco",
           "spotlight": true
         }
       ]

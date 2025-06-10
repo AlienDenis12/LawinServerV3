@@ -1,5 +1,5 @@
 > [!WARNING]
-> This LawinServer was not made by me
+> This LawinServer was not made by me!
 
 # LawinServerV3
 ### LawinServer V3 is a fortnite backend written in Node.js (based on lawinV2)
